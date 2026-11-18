@@ -15,7 +15,17 @@ Copy this folder into the Arduino `libraries` directory, or use **Sketch → Inc
 
 Requires **arduino-esp32** with board **ESP32P4**, **PSRAM Enabled**, Flash **16MB**.
 
-Optional for LVGL examples: install sibling library `lvgl` (v9.x) and use the Freenove-tuned `lv_conf.h`. See `docs/LVGL_Configuration_Guide.md`.
+### LVGL (`lv_conf.h`)
+
+For LVGL examples (`04`–`06`), also install sibling library **lvgl** (v9.x).  
+This library ships a Freenove-tuned config at `src/lv_conf.h`. Copy it to **one** of these places so LVGL can pick it up:
+
+1. **Arduino libraries root** — e.g. `Documents/Arduino/libraries/lv_conf.h`  
+2. **Inside LVGL** — e.g. `Documents/Arduino/libraries/lvgl/src/lv_conf.h`
+
+Do not leave two different copies that disagree. Prefer keeping Freenove’s file as the source of truth and re-copy after you change it.
+
+See `docs/LVGL_Configuration_Guide.md` for what the macros mean.
 
 ## Quick start (Freenove ESP32-P4 defaults)
 
